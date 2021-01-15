@@ -6,18 +6,6 @@ name: Publish edge-react-components npm Package
 on:
   release:
     types: [created]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run build
-
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -27,7 +15,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+          tag_name: 'v%s'
+          tag_message: 'v%s'
       - run: npm ci
+      - run: npm run build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
