@@ -1,6 +1,6 @@
 {
   "name": "edge-react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Re-usable react components for freelance projects",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
