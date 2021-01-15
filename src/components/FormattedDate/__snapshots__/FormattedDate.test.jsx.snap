@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Formatted Date Component should return Date and Time value if format attribute is not passed 1`] = `
+<FormattedDate
+  format="fullDateTime"
+>
+  <n
+    ago={false}
+    calendar={false}
+    decimal={false}
+    element={null}
+    filter={[Function]}
+    format="MMMM Do YYYY, h:mm:ss a"
+    fromNow={false}
+    interval={60000}
+    local={false}
+    onChange={[Function]}
+    titleFormat=""
+    toNow={false}
+    trim={false}
+    unit={null}
+    unix={false}
+    utc={false}
+    withTitle={false}
+  >
+    <time
+      dateTime={"2021-02-25T01:11:21.000Z"}
+    >
+      February 25th 2021, 6:41:21 am
+    </time>
+  </n>
+</FormattedDate>
+`;
+
 exports[`Formatted Date Component should return Date and Time value if format is set as dateOnly 1`] = `
 <FormattedDate
   format="fullDateTime"
@@ -59,38 +91,6 @@ exports[`Formatted Date Component should return Date only value if format is set
       dateTime={"2021-01-09T01:11:21.000Z"}
     >
       09/01/2021
-    </time>
-  </n>
-</FormattedDate>
-`;
-
-exports[`Formatted Date Component should return Time passed from now if format is set as fromNow 1`] = `
-<FormattedDate
-  format="fromNow"
->
-  <n
-    ago={false}
-    calendar={false}
-    decimal={false}
-    element={null}
-    filter={[Function]}
-    format={false}
-    fromNow={true}
-    interval={60000}
-    local={false}
-    onChange={[Function]}
-    titleFormat=""
-    toNow={false}
-    trim={false}
-    unit={null}
-    unix={false}
-    utc={false}
-    withTitle={false}
-  >
-    <time
-      dateTime={"2021-01-15T14:22:04.640Z"}
-    >
-      2 minutes ago
     </time>
   </n>
 </FormattedDate>

@@ -21,13 +21,18 @@ describe('Formatted Date Component', () => {
     expect(wrapper.find('time').text()).toBe('February 25th 2021, 6:41:21 am');
   });
 
+  test('should return Date and Time value if format attribute is not passed', () => {
+    const wrapper = mount(<FormattedDate>2021-02-25T01:11:21Z</FormattedDate>);
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('time').text()).toBe('February 25th 2021, 6:41:21 am');
+  });
+
   test('should return Time passed from now if format is set as fromNow', () => {
     const dt = new Date();
     dt.setMinutes(dt.getMinutes() - 2);
     const wrapper = mount(
       <FormattedDate format={'fromNow'}>{dt}</FormattedDate>,
     );
-    expect(wrapper).toMatchSnapshot();
     expect(wrapper.find('time').text()).toBe('2 minutes ago');
   });
 });

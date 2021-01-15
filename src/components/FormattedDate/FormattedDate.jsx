@@ -19,7 +19,8 @@ function FormattedDate({ format, children }) {
 
 FormattedDate.propTypes = {
   format: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.instanceOf(Date)])
+    .isRequired,
 };
 FormattedDate.defaultProps = {
   format: 'fullDateTime',
