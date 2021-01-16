@@ -17,8 +17,8 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - name: Set timezone to Asia/Kolkata
-        uses: actions/set-timezone-action@v1.1
+      - name: Set Timezone
+        uses: szenius/set-timezone@v1.0
         with:
           timezoneMacos: 'Asia/Kolkata'
 
