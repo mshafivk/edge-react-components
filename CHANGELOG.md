@@ -18,7 +18,8 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Readme file updated
-- Bundle size of npm package reduced.
+- Bundle size of npm package reduced
+- Build Workflow added with status badges
 
 ### Added
 
