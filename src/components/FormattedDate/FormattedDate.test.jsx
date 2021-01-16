@@ -11,7 +11,7 @@ describe('Formatted Date Component', () => {
     expect(wrapper.find('time').text()).toBe('09/01/2021');
   });
 
-  test('should return Date and Time value if format is set as dateOnly', () => {
+  test('should return Date and Time value if format is set as fullDateTime', () => {
     const wrapper = mount(
       <FormattedDate format={'fullDateTime'}>
         2021-02-25T01:11:21Z

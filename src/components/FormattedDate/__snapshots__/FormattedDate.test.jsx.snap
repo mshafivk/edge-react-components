@@ -32,7 +32,7 @@ exports[`Formatted Date Component should return Date and Time value if format at
 </FormattedDate>
 `;
 
-exports[`Formatted Date Component should return Date and Time value if format is set as dateOnly 1`] = `
+exports[`Formatted Date Component should return Date and Time value if format is set as fullDateTime 1`] = `
 <FormattedDate
   format="fullDateTime"
 >
