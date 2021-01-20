@@ -8,7 +8,7 @@ const updateOnlineStatus = () => {
   return status;
 };
 
-const useOnlineStatus = () => {
+const useNetworkStatus = () => {
   const [isOnline, setOnlineStatus] = useState(() => updateOnlineStatus());
 
   const onNetworkStatusChange = () => setOnlineStatus(updateOnlineStatus());
@@ -26,4 +26,4 @@ const useOnlineStatus = () => {
   return isOnline;
 };
 
-export default useOnlineStatus;
+export default useNetworkStatus;

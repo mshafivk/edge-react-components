@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import useOnlineStatus from './useOnlineStatus';
+import useNetworkStatus from './useNetworkStatus';
 
 const CustomComponent = () => {
-  const isOnline = useOnlineStatus();
+  const isOnline = useNetworkStatus();
   return <div test-id="is-online">{isOnline.toString()}</div>;
 };
 
-describe('useOnlineStatus Hook', () => {
+describe('useNetworkStatus Hook', () => {
   beforeEach(() => {
     jest.restoreAllMocks();
   });
