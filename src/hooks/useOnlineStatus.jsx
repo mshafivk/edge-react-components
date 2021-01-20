@@ -9,21 +9,17 @@ const updateOnlineStatus = () => {
 };
 
 const useOnlineStatus = () => {
-  const [isOnline, setOnlineStatus] = useState(updateOnlineStatus);
+  const [isOnline, setOnlineStatus] = useState(() => updateOnlineStatus());
+
+  const onNetworkStatusChange = () => setOnlineStatus(updateOnlineStatus());
 
   useEffect(() => {
-    window.addEventListener('online', setOnlineStatus(updateOnlineStatus()));
-    window.addEventListener('offline', setOnlineStatus(updateOnlineStatus()));
+    window.addEventListener('online', onNetworkStatusChange);
+    window.addEventListener('offline', onNetworkStatusChange);
 
     return () => {
-      window.removeEventListener(
-        'online',
-        setOnlineStatus(updateOnlineStatus()),
-      );
-      window.removeEventListener(
-        'offline',
-        setOnlineStatus(updateOnlineStatus()),
-      );
+      window.removeEventListener('online', onNetworkStatusChange);
+      window.removeEventListener('offline', onNetworkStatusChange);
     };
   }, []);
 

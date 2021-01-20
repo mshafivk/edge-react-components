@@ -27,10 +27,6 @@ describe('useOnlineStatus Hook', () => {
   test('should return false if value of navigator.online returns false', () => {
     jest
       .spyOn(navigator, 'onLine', 'get')
-      .mockReturnValueOnce(false) //setting values 2*2 times since each method call sets valuue twice
-      .mockReturnValueOnce(false)
-      .mockReturnValueOnce(false)
-      .mockReturnValueOnce(false)
       .mockReturnValueOnce(false)
       .mockReturnValueOnce(false);
     const wrapper = mount(<CustomComponent />);
