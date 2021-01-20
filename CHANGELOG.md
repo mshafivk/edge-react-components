@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2021-01-21
+
+### Added]
+
+- useNetworkStatus Hook
+
+### Changed
+
+- Storybook updated for FormattedDate component
+
 ## [0.0.2] - 2021-01-16
 
 ### Added]
